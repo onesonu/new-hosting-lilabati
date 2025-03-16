@@ -1,0 +1,17 @@
+<div class="gallery-container">
+    <div class="filter-buttons">
+      <button [class.active]="activeFilter === 'album'" (click)="setFilter('album')">Album</button>
+      <button [class.active]="activeFilter === 'video'" (click)="setFilter('video')">Video</button>
+    </div>
+  
+    <div class="gallery-grid">
+      <app-album *ngIf=" activeFilter === 'album'"></app-album>
+      <app-video *ngIf="activeFilter === 'video'"></app-video>
+    </div>
+
+    <div class="filter-buttons">
+      <button [class.active]="activeFilter === 'album'" (click)="setFilter('album')">Album</button>
+      <button [class.active]="activeFilter === 'video'" (click)="setFilter('video')">Video</button>
+    </div>
+  </div>
+  

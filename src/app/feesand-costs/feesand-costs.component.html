@@ -1,0 +1,33 @@
+<div class="fees-conatiner">
+<div class="container-top">
+    <h2>Fees and Costs</h2>
+    <p>Quality education at an affordable price—transparent fees, no hidden costs, and great value for your future!</p>
+</div>
+<div class="container">
+    <!-- Left side with radio buttons -->
+    <div class="left-side">
+      <h2>Select Category</h2>
+      <label>
+        <input type="radio" name="classSelection" (change)="onClassSelect('all')" [checked]="selectedClass === 'all'"> All
+      </label>
+      <label>
+        <input type="radio" name="classSelection" (change)="onClassSelect('class11')" [checked]="selectedClass === 'class11'"> Class 11th
+      </label>
+      <label>
+        <input type="radio" name="classSelection" (change)="onClassSelect('class12')" [checked]="selectedClass === 'class12'"> Class 12th
+      </label>
+    </div>
+  
+    <!-- Right side with class fees structure -->
+    <div class="right-side">
+      <app-class11th *ngIf="selectedClass === 'class11' || selectedClass === 'all'"></app-class11th>
+      <app-class12th *ngIf="selectedClass === 'class12' || selectedClass === 'all'"></app-class12th>
+    </div>
+</div>
+<div class="container-top">
+  <h2>Get Financial Aid</h2>
+  <p>Making education, growth, and opportunity more accessible—one financial aid solution at a time.</p>
+  <p>To know more.. join with us <u>WhatsApp</u></p>
+</div>
+</div>
+  

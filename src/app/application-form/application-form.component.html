@@ -1,0 +1,97 @@
+<div class="application-header">
+    <h1>Application</h1>
+    <nav>
+      <a routerLink="/home" >Home</a> / <span>Application</span>
+    </nav>
+  </div>
+  
+  <div class="form-container">
+    <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+      
+      <!-- Student Basic Information -->
+      <h3>Student basic information</h3>
+      <div class="form-group row">
+        <div class="col">
+          <label>Student's Full Name <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" formControlName="fullName" required />
+        </div>
+        <div class="col">
+          <label>Gender</label>
+          <select class="form-control" formControlName="gender" required>
+            <option value="">Select gender</option>
+            <option *ngFor="let gender of genders" [value]="gender">{{ gender }}</option>
+          </select>
+        </div>
+      </div>
+
+  
+      <!-- Student Personal Information -->
+      <h3>Student personal information</h3>
+      <div class="form-group row">
+        <div class="col">
+          <label>Guardian Name<span class="text-danger">*</span></label>
+          <input type="text" class="form-control" formControlName="guardianName" required />
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <div class="col">
+          <label>Contact No<span class="text-danger">*</span></label>
+          <input type="tel" class="form-control" formControlName="contact" required pattern="^[0-9]+$" />
+        </div>
+        
+        <div class="col">
+          <label>Email<span class="text-danger">*</span></label>
+          <input type="email" class="form-control" formControlName="email" required />
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <div class="col">
+          <label>Present Address <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" formControlName="presentAddress" required />
+        </div>
+        <div class="col">
+          <label>Date of Birth<span class="text-danger">*</span></label>
+          <input type="date" class="form-control" formControlName="dob" required />
+        </div>
+      </div>
+  
+      <!-- Student Academic Information -->
+      <h3>Student academic information</h3>
+      <div class="form-group row">
+        <div class="col">
+          <label>School <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" formControlName="school" required />
+        </div>
+        <div class="col">
+          <label>Year of Completion <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" formControlName="completionYear" required />
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <div class="col">
+          <label>Location <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" formControlName="schoolLocation" required />
+        </div>
+        <div class="col">
+          <label>Current Status <span class="text-danger">*</span></label>
+          <select class="form-control" formControlName="currentStatus" required>
+            <option value="">Select Current Status</option>
+            <option *ngFor="let status of statuses" [value]="status">{{ status }}</option>
+          </select>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <input type="checkbox" class="terms-check" formControlName="terms" required />
+        <label>By submitting this form, you agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.</label>
+      </div>
+  
+      <button type="submit" class="submit-btn" [disabled]="!applicationForm.valid">
+        Submit Application →
+      </button>
+    </form>
+  </div>
+  

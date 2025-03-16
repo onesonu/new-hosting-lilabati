@@ -1,0 +1,105 @@
+/* Style for the top bar */
+.top-bar {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  
+  /* Contact info and top links container */
+  .contact-info, .top-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* Style for links */
+  .contact-info a, .top-links a, .date {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+  }
+  
+  /* Hover effect for links */
+  .contact-info a:hover, .top-links a:hover {
+    color: #f39c12;
+  }
+  
+  /* Divider ( | ) */
+  .divider {
+    color: #ccc;
+    font-weight: bold;
+  }
+  
+  /* Icons inside contact-info */
+  .contact-info i {
+    color: #f39c12;
+    font-size: 14px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .top-bar .container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .contact-info, .top-links {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    padding: 15px 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Sticky Navbar */
+  .navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
+  }
+  
+  .navbar-brand img {
+    height: 40px;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    padding: 10px 15px;
+  }
+  
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    cursor: pointer;
+    color: #d32f2f;
+  }
+  
+  /* If you want to customize the active link further, you can style it differently */
+  .navbar-nav .nav-link.active {
+    font-weight: 700; /* Example: make the active link bold */
+  }  
+  
+  .apply-btn {
+    background: #a52a2a;
+    border-radius: 5px;
+    padding: 8px 20px;
+    border-color: #a52a2a;
+  }
+  
+  .apply-btn:hover {
+    background: #b71c1c;
+  }
+  

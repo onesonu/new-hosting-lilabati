@@ -1,0 +1,102 @@
+<div class="signin-container">
+    <!-- Left Side (Image) -->
+    <div class="signin-left">
+      <img src="/assets/lilabati_icons/data-science.svg" alt="Sign-in Illustration">
+    </div>
+  
+    <!-- Right Side (Form) -->
+    <div class="signin-right">
+      <h3>Welcome to Lilanati Console</h3>
+      <p>Already have an account? <a routerLink="/signin">Sign-in</a></p>
+  
+      <!-- Role Selection Buttons -->
+        <div class="role-buttons">
+            <button 
+            class="role-btn" 
+            [class.active]="selectedRole === 'admin'" 
+            (click)="selectRole('admin')">
+            Admin
+            </button>
+            <button 
+            class="role-btn" 
+            [class.active]="selectedRole === 'teacher'" 
+            (click)="selectRole('teacher')">
+            Teacher
+            </button>
+            <button 
+            class="role-btn" 
+            [class.active]="selectedRole === 'student'" 
+            (click)="selectRole('student')">
+            Student
+            </button>
+        </div>  
+  
+      <form (submit)="onSubmit()">
+        <!-- email -->
+        <div class="input-group">
+          <label for="username">Full Name*</label>
+          <div class="input-wrapper">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" [(ngModel)]="fullName" name="username" required>
+          </div>
+        </div>
+        <!-- Email -->
+        <div class="input-group">
+            <label for="username">Email*</label>
+            <div class="input-wrapper">
+              <i class="fas fa-user"></i>
+              <input type="text" id="username" [(ngModel)]="email" name="username" required>
+            </div>
+          </div>
+          <!-- Phone -->
+        <div class="input-group">
+            <label for="username">Phone</label>
+            <div class="input-wrapper">
+              <i class="fas fa-user"></i>
+              <input type="tel" id="username" [(ngModel)]="phone" name="username" required>
+            </div>
+          </div>
+  
+        <!-- Password -->
+        <div class="input-group">
+          <label for="password">Password*</label>
+          <div class="input-wrapper">
+            <i class="fas fa-lock"></i>
+            <input [type]="passwordVisible ? 'text' : 'password'" id="password" [(ngModel)]="password" name="password" required>
+            <i class="fas" [ngClass]="passwordVisible ? 'fa-eye' : 'fa-eye-slash'" (click)="togglePassword()"></i>
+          </div>
+        </div>
+        <!-- Confirm pass Password -->
+        <div class="input-group">
+            <label for="password">Confirm Password*</label>
+            <div class="input-wrapper">
+              <i class="fas fa-lock"></i>
+              <input [type]="passwordVisible ? 'text' : 'password'" id="password" [(ngModel)]="password" name="password" required>
+              <i class="fas" [ngClass]="passwordVisible ? 'fa-eye' : 'fa-eye-slash'" (click)="togglePassword()"></i>
+            </div>
+          </div>
+  
+        <!-- Remember Me & Forgot Password -->
+        <div class="remember-forgot">
+          <label><input type="checkbox"> by clicking i confirms terms & conditions</label>
+        </div>
+  
+        <!-- Login Button -->
+        <button type="submit" class="login-btn">SignUp</button>
+  
+        <!-- OR Divider -->
+        <div class="or-divider">
+          <span>OR</span>
+        </div>
+  
+        <!-- Social Login -->
+        <div class="social-login">
+          <i class="fab fa-google"></i>
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+      </form>
+    </div>
+  </div>
+  

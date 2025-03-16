@@ -1,0 +1,38 @@
+<div class="courses-container">
+<section class="courses-header">
+    <div class="overlay">
+      <div class="container">
+        <h1>Courses</h1>
+        <nav class="breadcrumb-nav">
+          <a routerLink="/home">Home</a> / <span>Courses</span>
+        </nav>
+      </div>
+    </div>
+  </section>
+  
+  <section class="courses-section">
+    <div class="container">
+      <!-- Header -->
+      <div class="header text-center">
+        <h2>Browse courses by study area</h2>
+        <p>"Discover a World of Knowledge – Browse Courses by Study Area and Find the Perfect Path to Unleash Your Potential."</p>
+      </div>
+  
+      <!-- Courses Grid -->
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let course of courses">
+          <div class="course-card">
+            <img [src]="course.image" [alt]="course.title">
+            <div class="course-content">
+              <h3>{{ course.title }}</h3>
+              <p>{{ course.description }}</p>
+              <a routerLink="#" class="course-link">Find out more →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+  

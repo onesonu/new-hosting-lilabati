@@ -1,0 +1,29 @@
+<div class="chatbot-container">
+    <!-- Arc Text using SVG-->
+    <svg class="chatbot-arc-text" width="100" height="60">
+      <path id="curve" d="M10,50 A20,30 0 0,1 90,55" fill="transparent" />
+      <text width="100" fill="white" font-size="12px" font-weight="bold">
+        <textPath xlink:href="#curve" startOffset="50%" text-anchor="middle">
+          Ask to Lilabati
+        </textPath>
+      </text>
+    </svg>   
+  
+    <!-- Chatbot Button -->
+    <a href="javascript:void(0)" (click)="toggleChatbox()" class="chatbot-btn">
+      <img src="assets/lilabati_icons/chatbot.jpeg" 
+           alt="Chatbot" class="chatbot-icon" />
+    </a>
+  </div>
+  
+  <!-- Chatbox
+  <div class="chatbox" *ngIf="isChatboxOpen">
+    <div class="chatbox-header">
+      <span>Chat with Lilabati</span>
+      <button (click)="toggleChatbox()">✖</button>
+    </div>
+    <div class="chatbox-content">
+      <p>Welcome! How can I help you?</p>
+    </div>
+  </div>  -->
+  

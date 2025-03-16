@@ -1,0 +1,42 @@
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  justify-content: center;
+}
+
+/* Album Card */
+.album-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  width: fit-content;  /* Adjusts card width to match content */
+  display: inline-block; /* Ensures the card wraps around the image */
+}
+
+/* Hover Effect */
+.album-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Album Image */
+.album-card img {
+  width: 100%;
+  height: auto;  /* Ensures the height is dynamic */
+  display: block; /* Prevents inline spacing issues */
+}
+
+/* Album Title */
+.album-card h3 {
+  padding: 15px;
+  background: #4caf50;
+  color: white;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}

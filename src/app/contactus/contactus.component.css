@@ -1,0 +1,165 @@
+.contact-us {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header Section */
+.header-section {
+  text-align: center;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  background-size: cover; /* Ensures the image covers the whole container */
+  padding: 50px 0;
+  color: white;
+  position: relative; /* Needed for positioning the overlay */
+}
+
+/* Overlay */
+.header-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 1; /* Places the overlay above the background but behind text */
+}
+
+/* Text styles */
+.header-section h1 {
+  font-size: 36px;
+  font-weight: bold;
+  z-index: 2; /* Ensures the text stays above the overlay */
+  position: relative; /* Positions text above the overlay */
+}
+
+.header-section p {
+  font-size: 16px;
+  z-index: 2; /* Ensures the paragraph stays above the overlay */
+  position: relative; /* Positions text above the overlay */
+}  
+  /* Contact Info & Map Section */
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  
+  .map-container {
+    width: 100%;
+  }
+  
+  .contact-details {
+    width: 35%;
+    background: #15153a;
+    color: white;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-right: 20px;
+    border-radius: 0px;
+  }
+  
+  .contact-details h3 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .contact-details ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-details ul li {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .contact-details i {
+    margin-right: 10px;
+  }
+  
+  .social-icons i {
+    font-size: 20px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .contact-form h2 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .contact-form p {
+    font-size: 16px;
+    color: gray;
+  }
+  
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  .form-group input {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 100px;
+  }
+  
+  .checkbox-group {
+    text-align: left;
+    margin-top: 10px;
+  }
+  
+  button {
+    background-color: #a52a2a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .contact-details {
+      padding-bottom: 20px;
+    }
+  
+    .map-container, .contact-details {
+      width: 100%;
+    }
+  
+    .form-group {
+      flex-direction: column;
+    }
+  
+    .form-group input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  

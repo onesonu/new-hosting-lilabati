@@ -1,0 +1,78 @@
+<div class="signin-container">
+    <!-- Left Side (Image) -->
+    <div class="signin-left">
+      <img src="/assets/lilabati_icons/data-science.svg" alt="Sign-in Illustration">
+    </div>
+  
+    <!-- Right Side (Form) -->
+    <div class="signin-right">
+      <h3> Welcome to Lilabati Console </h3>
+      <p> Need an account? <a routerLink="/signup">Sign-up</a></p>
+  
+      <!-- Role Selection Buttons -->
+        <div class="role-buttons">
+            <button 
+            class="role-btn" 
+            [class.active]="selectedRole === 'admin'" 
+            (click)="selectRole('admin')">
+            Admin
+            </button>
+            <button 
+            class="role-btn" 
+            [class.active]="selectedRole === 'teacher'" 
+            (click)="selectRole('teacher')">
+            Teacher
+            </button>
+            <button 
+            class="role-btn" 
+            [class.active]="selectedRole === 'student'" 
+            (click)="selectRole('student')">
+            Student
+            </button>
+        </div>  
+  
+      <form (submit)="onSubmit()">
+        <!-- Username -->
+        <div class="input-group">
+          <label for="username">Username*</label>
+          <div class="input-wrapper">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" [(ngModel)]="username" name="username" required>
+          </div>
+        </div>
+  
+        <!-- Password -->
+        <div class="input-group">
+          <label for="password">Password*</label>
+          <div class="input-wrapper">
+            <i class="fas fa-lock"></i>
+            <input [type]="passwordVisible ? 'text' : 'password'" id="password" [(ngModel)]="password" name="password" required>
+            <i class="fas" [ngClass]="passwordVisible ? 'fa-eye' : 'fa-eye-slash'" (click)="togglePassword()"></i>
+          </div>
+        </div>
+  
+        <!-- Remember Me & Forgot Password -->
+        <div class="remember-forgot">
+          <label><input type="checkbox"> Remember me</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+  
+        <!-- Login Button -->
+        <button type="submit" class="login-btn">Sign-up</button>
+  
+        <!-- OR Divider -->
+        <div class="or-divider">
+          <span>OR</span>
+        </div>
+  
+        <!-- Social Login -->
+        <div class="social-login">
+          <i class="fab fa-google"></i>
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+      </form>
+    </div>
+  </div>
+  

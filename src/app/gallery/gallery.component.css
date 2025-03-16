@@ -1,0 +1,78 @@
+.gallery-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ff3e64;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Grid Layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-grid app-album,
+.gallery-grid app-video {
+  animation: fadeIn 0.8s ease-in-out forwards;
+  opacity: 0;
+}
+
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Button Style */
+.filter-buttons button {
+  background: linear-gradient(135deg, #007bff, #0056b3); 
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button Hover */
+.filter-buttons button:hover {
+  background: linear-gradient(135deg, #ff5f7e, #ff3e64);
+  transform: scale(1.05);
+}
+
+/* Active Button */
+.filter-buttons button.active {
+  background: linear-gradient(135deg, #ff3e64, #ff1a45);
+  box-shadow: 0 4px 10px rgba(255, 58, 90, 0.5);
+  transform: scale(1.1);
+}
+

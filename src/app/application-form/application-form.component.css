@@ -1,0 +1,91 @@
+.application-header {
+  position: relative;
+  background: url('/assets/images/browsecourse.png') no-repeat center center;
+  background-size: cover;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+.application-header a {
+  text-decoration: none;
+  color: inherit; /* Optional: Ensures the link inherits the text color of its parent */
+}
+
+/* Overlay Effect */
+.application-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Change the color & opacity */
+  z-index: 1;
+}
+
+/* Ensure text is above the overlay */
+.application-header * {
+  position: relative;
+  z-index: 2;
+} 
+  .form-container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.453);
+  }
+  
+  h3 {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive Two-Column Layout */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .col {
+    flex: 1;
+    min-width: 100%;
+  }
+  
+  /* Desktop: Two-column layout */
+  @media (min-width: 768px) {
+    .col {
+      min-width: 48%;
+    }
+  }
+  
+  .submit-btn {
+    width: 100%;
+    justify-content: center;
+    background-color: #a52a2a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    
+  }
+  
+  .submit-btn:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  .terms-check{
+    margin-right: 20px;
+  }
+
+ 
+  

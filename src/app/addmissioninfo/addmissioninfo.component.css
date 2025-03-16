@@ -1,0 +1,124 @@
+.addmission-conatiner{
+  font-family: Arial, sans-serif;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.admission-info {
+    padding: 50px 0;
+  }
+  
+  .admission-header {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+    position: relative;
+  }
+  
+  .admission-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.634);
+  }
+  
+  .admission-header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .admission-header p {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+  }
+  
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel-slide {
+    display: none;
+    text-align: center;
+    position: relative;
+  }
+  
+  .carousel-slide.active {
+    display: block;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: center;
+    border-radius: 0;
+  }
+  
+  .slide-content {
+    background: white;
+    padding: 20px;
+    margin: -50px auto 0;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+  }
+  
+  .btn-primary {
+    background: #a52a2a;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: none;
+    transition: 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background: #871717;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+  }
+  
+  .prev { left: 10px; }
+  .next { right: 10px; }
+  
+  .admission-details {
+    max-width: 900px;
+    margin: 40px auto;
+  }
+  
+  .admission-details h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .admission-details p {
+    line-height: 1.6;
+  }
+  

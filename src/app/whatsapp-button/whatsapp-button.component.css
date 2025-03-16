@@ -1,0 +1,20 @@
+ /* WhatsApp button floating on the right bottom corner of the Home Component */
+/* WhatsApp button styling */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;   /* Distance from the bottom */
+    right: 20px;    /* Distance from the right */
+    z-index: 9999;  /* Ensure it stays on top */
+  }
+  
+  .whatsapp-btn button {
+    background-color: transparent;  /* Remove default background */
+    border: none;                   /* Remove border */
+    padding: 10px;                   /* Adjust button padding */
+    cursor: pointer;                /* Add pointer cursor */
+  }
+  
+  .whatsapp-icon {
+    width: 50px;  /* Size of the WhatsApp icon */
+    height: 50px; /* Size of the WhatsApp icon */
+  }

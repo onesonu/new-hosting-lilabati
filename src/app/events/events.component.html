@@ -1,0 +1,33 @@
+<div class="events-container">
+  <!-- Banner Section -->
+  <div class="banner">
+    <h1>Events</h1>
+    <p>Home / Events</p>
+  </div>
+
+  <!-- Events Grid -->
+  <div class="events-grid">
+    <div class="event-card" *ngFor="let event of paginatedEvents">
+      <div class="event-date">
+        <span class="date">{{ event.date }}</span>
+        <span class="year">{{ event.year }}</span>
+      </div>
+      <div class="event-details">
+        <h4 class="event-category">Conference</h4>
+        <h2 class="event-title">{{ event.title }}</h2>
+        <p class="event-description">{{ event.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">‹</button>
+    <button *ngFor="let page of totalPages; let i = index" 
+            (click)="changePage(i + 1)" 
+            [class.active]="currentPage === i + 1">
+      {{ i + 1 }}
+    </button>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages.length">›</button>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="about-us-container">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-section">
+      <h1>{{ pageTitle }}</h1>
+      <p>Home / {{ breadcrumb }}</p>
+    </div>
+
+    <!-- Directir Message  -->
+    <div class="professors-section">
+      <h2 class="section-title">{{ professorSectionTitle }}</h2>
+      <p class="section-description">{{ professorSectionSubtitle }}</p>
+      <div class="professor-cards">
+        <div class="professor-card" *ngFor="let prof of professors">
+          <img [src]="prof.image" alt="{{ prof.name }}" />
+          <h4>{{ prof.name }}</h4>
+          <p>{{ prof.designation }}</p>
+          <p class="msg">{{ prof.message }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- About Section -->
+    <div class="about-section">
+      <div class="about-image">
+        <img [src]="aboutImage" alt="About Us" />
+      </div>
+      <div class="about-content">
+        <span class="section-subtitle">{{ aboutSubtitle }}</span>
+        <h2 class="section-title">{{ aboutTitle }}</h2>
+        <p class="section-description">{{ aboutDescription }}</p>
+      </div>
+    </div>
+  
+    <!-- Statistics Section -->
+    <div class="statistics-section">
+      <div class="stat-box" *ngFor="let stat of statistics">
+        <h3>{{ stat.value }}</h3>
+        <p>{{ stat.label }}</p>
+      </div>
+    </div>
+  
+    <!-- Campus Information -->
+    <div class="campus-section">
+      <div class="campus-content">
+        <span class="section-subtitle">{{ campusSubtitle }}</span>
+        <h2 class="section-title">{{ campusTitle }}</h2>
+        <p class="section-description">{{ campusDescription }}</p>
+        <button class="btn btn-dark-red">{{ campusButtonText }}</button>
+      </div>
+      <div class="campus-image">
+        <img [src]="campusImage" alt="Campus" />
+      </div>
+      
+    </div>
+  
+  
+    <!-- Admission Information -->
+    <div class="admission-section">
+      <div class="admission-image">
+        <img [src]="admissionImage" alt="Admission" />
+      </div>
+      <div class="admission-content">
+        <span class="section-subtitle">{{ admissionSubtitle }}</span>
+        <h2 class="section-title">{{ admissionTitle }}</h2>
+        <p class="section-description">{{ admissionDescription }}</p>
+        <button class="btn btn-dark-red">{{ admissionButtonText }}</button>
+      </div>
+    </div>
+</div>
+  

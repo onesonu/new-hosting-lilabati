@@ -1,0 +1,451 @@
+<!-- Add the moving text section here -->
+<section>
+  <marquee scrollamount="15" style="color: rgb(255, 255, 255); background: linear-gradient(135deg, #007bff, #0056b3); font-size: 20px;">
+    Summer course starts from <u>April</u> || Summer course starts from <u>April</u> || Summer course starts from <u>April</u> || Summer course starts from <u>April</u> || Summer course starts from <u>April</u> || Summer course starts from <u>April</u> || Summer course starts from <u>April</u> || Summer course starts from <u>April</u> || Summer course starts from <u>April</u>
+  </marquee>
+</section>
+<!--......................................................................................................-->
+<!-- Hero Section -->
+<section class="hero-section">
+<div class="container">
+<div class="row align-items-center">
+<!-- Left Content -->
+<div class="col-lg-6">
+  <p class="welcome-text">Welcome to Lilabati</p>
+  <h1 class="hero-title">
+    Building a strong foundation <br />
+    for success through quality education.
+  </h1>
+  <a routerLink="#" class="btn btn-primary"> View Campus →</a>
+  <!-- Link to open the modal -->
+  <a href="javascript:void(0);" (click)="openQueryModal()" class="btn btn-primary">Raise Query →</a>
+      <!-- Modal component (bind isModalOpen and listen to closeModal event) -->
+      <app-queryraise 
+        [isModalOpen]="isModalOpen" 
+        (closeModal)="closeQueryModal()">
+      </app-queryraise>
+      
+  <div class="hero-links">
+    <a routerLink="/courses">Explore our courses →</a>
+    <a routerLink="/addmissioninfo"> Admission →</a>
+  </div>
+</div>
+<!-- Right Image -->
+<div class="col-lg-6 text-center">
+  <img src="assets/images/hero-bg.jpeg" alt="Students" class="hero-img" />
+</div>
+</div>
+</div>
+<div class="social-links">
+<a routerLink="#">Facebook</a>
+<a routerLink="#">Instagram</a>
+<a routerLink="#">Twitter</a>
+<a routerLink="#">LinkedIn</a>
+</div>
+</section>
+
+<!--......................................................................................................-->
+<!-- About Section -->
+<section class="about-university container">
+<div class="row align-items-center">
+<div class="col-lg-6">
+<div class="image-frame">
+  <img src="/assets/images/graduation ceremony.jpeg" alt="Graduation Ceremony" class="img-fluid">
+</div>
+</div>
+<div class="col-lg-6">
+<div class="about-content">
+  <p class="section-tag">About our Lilabati HSS</p>
+  <h2 class="section-title">Our education system inspires the next generation</h2>
+  <p class="section-description">Lilabati is Residential Higher Secondary School for the students who wants to pursue a career in Science streem after class 10th. 
+    Our education system nurtures young minds, equipping them with 
+    knowledge and critical thinking skills to shape the future. 
+    By fostering creativity and innovation, it prepares students to 
+    tackle real-world challenges with confidence. Through modern teaching methods, 
+    we inspire the next generation to dream big and make a lasting impact.Our education system nurtures young minds, equipping them with 
+    knowledge and critical thinking skills to shape the future. 
+    By fostering creativity and innovation, it prepares students to 
+    tackle real-world challenges with confidence. Through modern teaching methods, 
+    we inspire the next generation to dream big and make a lasting impact.
+  </p>
+  <a routerLink="/aboutus" class="btn btn-primary">Find out more →</a>
+</div>
+</div>
+</div>
+</section>
+
+<!--......................................................................................................-->
+<!--browse courses-->
+<section class="browse-courses">
+<div class="container">
+<div class="text-center">
+<h2 class="section-title">Browse courses by study area</h2>
+<p class="section-subtitle">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+</p>
+</div>
+
+<div class="courses-slider">
+<div class="course-card">
+  <div class="icon"><img src="" alt=""></div>
+  <h3>Class-11th</h3>
+  <p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor incididunt ut labore et dolore.</p>
+  <a href="#" class="learn-more">Find out more →</a>
+</div>
+
+<div class="course-card">
+  <div class="icon"><img src="" alt=""></div>
+  <h3>Class-12th</h3>
+  <p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor incididunt ut labore et dolore.</p>
+  <a href="#" class="learn-more">Find out more →</a>
+</div>
+
+<div class="course-card">
+  <div class="icon"><img src="" alt=""></div>
+  <h3>NEET/OUAT</h3>
+  <p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor incididunt ut labore et dolore.</p>
+  <a href="#" class="learn-more">Find out more →</a>
+</div>
+
+<div class="course-card">
+  <div class="icon"><img src="" alt=""></div>
+  <h3>JEE</h3>
+  <p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor incididunt ut labore et dolore.</p>
+  <a href="#" class="learn-more">Find out more →</a>
+</div>
+</div>
+
+<div class="slider-controls">
+<button class="prev"><</button>
+<button class="next">></button>
+</div>
+</div>
+</section>
+
+<!--......................................................................................................-->
+<!-- Campus information -->
+<section class="campus-info-section py-5">
+<div class="container">
+<div class="row align-items-center">
+
+<!-- Left Side: Image -->
+<div class="col-md-6">
+  <div class="image-frame">
+  <img src="assets/images/campuslife.jpeg" alt="Campus Life" class="img-fluid rounded">
+</div>
+</div>
+
+<!-- Right Side: Content -->
+<div class="col-md-6">
+  <div class="campus-info-box p-4">
+    <h6 class="fw-bold">Our campus information</h6>
+    <h2 class="fw-bold">
+      We are proud to have a diverse<br> student community that enriches our<br> campus experience.
+    </h2>
+    <p>
+      Our campus takes pride in the success of more than 5000 students who have passed out and built remarkable careers. With a strong legacy of excellence, we continue to empower students to achieve their dreams and make a global impact.
+    </p>
+    <a href="#" class="fw-bold find-out-link">Find out more →</a>
+  </div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!--......................................................................................................-->
+<!-- How it works Steps...... -->
+<section class="how-it-works py-5">
+<div class="container text-center">
+
+<!-- Section Title -->
+<p class="text-danger fw-bold">How it works</p>
+<h2 class="fw-bold">Simple steps to start</h2>
+<p class="text-muted">
+Get started effortlessly with these simple steps to begin your journey toward success.
+</p>
+
+<!-- Steps Grid -->
+<div class="row mt-4">
+
+<!-- Step 1 -->
+<div class="col-md-3">
+<div class="step-card p-4">
+  <div class="step-icon">
+    <img src="assets/lilabati_icons/question.svg" alt="Query">
+  </div>
+  <h5 class="fw-bold">Querist</h5>
+  <p>Begin your journey by reaching out to us with your questions or inquiries. Our team is here to guide you every step of the way!"</p>
+</div>
+</div>
+
+<!-- Step 2 -->
+<div class="col-md-3">
+<div class="step-card p-4">
+  <div class="step-icon">
+    <img src="assets/lilabati_icons/choose.svg" alt="Choose">
+  </div>
+  <h5 class="fw-bold">Choose</h5>
+  <p>Explore our courses and programs, and select the path that aligns with your goals and passions.</p>
+</div>
+</div>
+
+<!-- Step 3 -->
+<div class="col-md-3">
+<div class="step-card p-4">
+  <div class="step-icon">
+    <img src="assets/lilabati_icons/log-in.svg" alt="Enroll">
+  </div>
+  <h5 class="fw-bold">Enroll</h5>
+  <p>Complete your enrollment and become a part of our vibrant academic community..</p>
+</div>
+</div>
+
+<!-- Step 4 -->
+<div class="col-md-3">
+<div class="step-card p-4">
+  <div class="step-icon">
+    <img src="assets/lilabati_icons/shuttle.svg" alt="Start">
+  </div>
+  <h5 class="fw-bold">Start</h5>
+  <p>Begin your journey with us, embrace new opportunities, and take the first step toward your future.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!--......................................................................................................-->
+<!-- Event Section -->
+<section class="upcoming-events py-5">
+<div class="container">
+<!-- Section Title -->
+<p class="text-danger fw-bold mb-1">Events</p>
+<h2 class="fw-bold display-5 mb-4">Upcoming events</h2>
+
+<div class="row">
+<!-- Events List -->
+<div class="col-lg-7">
+  <div class="event-list">
+    <!-- Event 1 -->
+    <div class="event-item d-flex align-items-start mb-4">
+      <div class="date-box text-white text-center">
+        <h5 class="mb-0">01 Jan</h5>
+        <p class="mb-0">2025</p>
+      </div>
+      <div class="event-details ps-3">
+        <p class="event-type">Conference</p>
+        <h5 class="fw-bold">Universities admission conference 2024</h5>
+        <p class="event-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+        </p>
+        <a href="#" class="fw-bold text-decoration-none">Find out more →</a>
+      </div>
+    </div>
+
+    <!-- Event 2 -->
+    <div class="event-item d-flex align-items-start mb-4">
+      <div class="date-box text-white text-center">
+        <h5 class="mb-0">12 Jun</h5>
+        <p class="mb-0">2025</p>
+      </div>
+      <div class="event-details ps-3">
+        <p class="event-type">Conference</p>
+        <h5 class="fw-bold">History and culture open day conference 2024</h5>
+        <p class="event-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+        </p>
+        <a href="#" class="fw-bold text-decoration-none">Find out more →</a>
+      </div>
+    </div>
+
+    <!-- Event 3 -->
+    <div class="event-item d-flex align-items-start">
+      <div class="date-box text-white text-center">
+        <h5 class="mb-0">15 Aug</h5>
+        <p class="mb-0">2025</p>
+      </div>
+      <div class="event-details ps-3">
+        <p class="event-type">Conference</p>
+        <h5 class="fw-bold">Undergraduate and postgraduate open days 2024</h5>
+        <p class="event-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+        </p>
+        <a href="#" class="fw-bold text-decoration-none">Find out more →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Next Event with Countdown -->
+<div class="col-lg-5">
+  <div class="next-event-card">
+    <img src="assets/images/upcoming events.jpeg" alt="Next Event" class="img-fluid rounded">
+    <p class="fw-bold mt-3">Next Event</p>
+    <div class="countdown d-flex justify-content-center">
+      <div class="time-box">
+        <h5 class="mb-0">0d</h5>
+      </div>
+      <div class="time-box">
+        <h5 class="mb-0">0h</h5>
+      </div>
+      <div class="time-box">
+        <h5 class="mb-0">0m</h5>
+      </div>
+      <div class="time-box">
+        <h5 class="mb-0">0s</h5>
+      </div>
+    </div>
+    <button class="btn btn-danger mt-3 px-4 py-2" (click)="redirectToSignIn()" >Book now →</button>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<!--......................................................................................................-->
+<!-- Admission Info -->
+<section class="admission-info py-5">
+<div class="container">
+<div class="row align-items-center">
+<!-- Image with Framed Background -->
+<div class="col-lg-6 position-relative hide-on-mobile">
+<div class="image-frame">
+<img src="assets/images/addmission_info.png" alt="Students" class="img-fluid admission-img"> </div>
+</div>
+
+<!-- Text Content -->
+<div class="col-lg-6">
+<p class="text-danger fw-bold mb-1">Admission information</p>
+<h2 class="fw-bold display-5">
+  All types of university admission information can be found here
+</h2>
+<p class="text-muted">
+  Curabitur aliquet quam id dui posuere blandit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. 
+  Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
+  Donec velit neque, auctor sit amet aliquam vel, ullamcorper.
+</p>
+<button class="btn btn-dark-red mt-3 px-4 py-2" [routerLink]="'/addmissioninfo'" >Overview →</button>
+</div>
+</div>
+</div>
+</section>
+
+<!--......................................................................................................-->
+<!-- Find a Courses Section  -->
+<section class="find-course-section py-5">
+<div class="container">
+<div class="row">
+<!-- Find a Courses Form -->
+<div class="col-lg-6">
+  <div class="find-course-box p-4">
+    <h2 class="fw-bold">Find about courses</h2>
+    <div class="mb-3">
+      <label class="form-check-label me-3">
+        <input type="radio" name="courseType" checked>
+        <span class="text-danger fw-bold">Class-11th</span>
+      </label>
+      <label class="form-check-label me-3">
+        <input type="radio" name="courseType">
+        <span class="text-muted">Class-12th</span>
+      </label>
+      <label class="form-check-label me-3">
+        <input type="radio" name="courseType">
+        <span class="text-muted">NEET</span>
+      </label>
+      <label class="form-check-label me-3">
+        <input type="radio" name="courseType">
+        <span class="text-muted">JEE</span>
+      </label>
+    </div>
+    <input type="text" class="form-control mb-3" placeholder="Keyword search">
+    <select class="form-select mb-3">
+      <option selected> Course Category </option>
+      <option >Science</option>
+      <option>Arts</option>
+      <option>Commerce</option>
+    </select>
+    <select class="form-select mb-3">
+      <option>Subject Category</option>
+      <option>subject-1</option>
+      <option>subject-2</option>
+      <option>subject-3</option>
+      <option>subject-4</option>
+    </select>
+    <button class="btn btn-dark-red w-100 d-flex align-items-center justify-content-center">
+      Search <span class="ms-2">🔍</span>
+    </button>
+  </div>
+</div>
+
+<!-- Stats Section -->
+<div class="col-lg-6">
+  <div class="stats-grid">
+    <div class="stats-box bg-dark-red">
+      <div class="stats-icon">🎓</div>
+      <h3>4517</h3>
+      <p>Students</p>
+    </div>
+    <div class="stats-box bg-dark-blue">
+      <div class="stats-icon">👨‍🏫</div>
+      <h3>640</h3>
+      <p>Teachers</p>
+    </div>
+    <div class="stats-box bg-dark-blue">
+      <div class="stats-icon">📚</div>
+      <h3>54</h3>
+      <p>Subjects</p>
+    </div>
+    <div class="stats-box bg-dark-red">
+      <div class="stats-icon">🎓</div>
+      <h3>269</h3>
+      <p>Degrees</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<!--......................................................................................................-->
+<!-- Student Testimonial Section -->
+<section class="academic-news-section py-5">
+<div class="container">
+<!-- Section Title -->
+<h2 class="fw-bold text-center">Student's Testimonial</h2>
+<p class="text-center text-muted section-subtitle">
+"Students share their experiences, highlighting their academic journeys and campus life. 
+Hear firsthand stories of challenges, achievements, and growth."
+</p>
+
+<div class="news-wrapper position-relative">
+<!-- Left Scroll Button -->
+<button class="scroll-btn left" (click)="scrollLeft()">
+<i class="bi bi-chevron-left"><</i>
+</button>
+
+<!-- News Cards Container -->
+<div class="news-carousel d-flex overflow-hidden" #newsContainer>
+<!-- Loop through testimonials array to generate news cards -->
+<div class="news-card" *ngFor="let testimonial of testimonials">
+  <img [src]="testimonial.image" class="news-image" [alt]="testimonial.title">
+  <div class="news-content">
+    <p class="news-date"><i class="bi bi-calendar-event"></i> {{ testimonial.date }}</p>
+    <h4 class="news-title">{{ testimonial.title }}</h4>
+    <p class="news-text">{{ testimonial.text }}</p>
+    <a [href]="testimonial.link" class="news-link">Find out more →</a>
+  </div>
+</div>
+</div>
+
+<!-- Right Scroll Button -->
+<button class="scroll-btn right" (click)="scrollRight()"> >
+<i class="bi bi-chevron-right"></i>
+</button>
+</div>
+</div>
+</section>
+
+
+

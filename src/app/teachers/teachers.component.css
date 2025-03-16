@@ -1,0 +1,204 @@
+
+/* Teachers Section */
+.teachers-conatiner {
+  font-family: Arial, sans-serif;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Teacher Header Section */
+.teacher-header {
+  position: relative;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  text-align: center;
+  padding: 50px;
+  color: white !important;
+  overflow: hidden;
+}
+
+.teacher-header .lik {
+  color: white !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.teacher-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust overlay opacity */
+  z-index: 1;
+}
+
+.teacher-header h1,
+.teacher-header p {
+  position: relative;
+  z-index: 2;
+}
+
+.teacher-header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.teacher-header p {
+  font-size: 15px;
+}
+
+/* Teacher Container */
+.teacher-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.teacher-container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.teacher-container p {
+  color: #000000;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+/* Responsive Grid Layout */
+.teacher-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Teacher Card */
+.teacher-card {
+  position: relative;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.teacher-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Teacher Image */
+.teacher-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.teacher-card:hover .teacher-img {
+  transform: scale(1.05);
+}
+
+/* Teacher Info */
+.teacher-info {
+  padding: 15px;
+}
+
+.teacher-info h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.teacher-info p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Share Icon */
+.share-icon {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: #1e3a8a;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.share-icon:hover {
+  background: #0a2a72;
+}
+
+.share-icon i {
+  font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .teacher-header {
+    padding: 40px 20px;
+  }
+
+  .teacher-header h1 {
+    font-size: 30px;
+  }
+
+  .teacher-header p {
+    font-size: 14px;
+  }
+
+  .teacher-container {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .teacher-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .teacher-header {
+    padding: 30px 15px;
+  }
+
+  .teacher-header h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .teacher-header {
+    padding: 25px 10px;
+  }
+
+  .teacher-header h1 {
+    font-size: 24px;
+  }
+
+  .teacher-header p {
+    font-size: 13px;
+  }
+
+  .teacher-container {
+    padding: 20px 10px;
+  }
+
+  .teacher-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

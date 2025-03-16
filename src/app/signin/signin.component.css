@@ -1,0 +1,242 @@
+/* Container */
+.signin-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f9f9f9;
+  padding: 20px;
+  gap: 30px;
+}
+
+/* Left Side */
+.signin-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  max-width: 50%;
+}
+
+.signin-left img {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Right Side */
+.signin-right {
+  flex: 1;
+  max-width: 400px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Welcome Text */
+h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+}
+
+p a {
+  color: #a52a2a;
+  font-weight: bold;
+}
+
+/* Role Buttons */
+.role-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Default Button Styling */
+.role-btn {
+  flex: 1;
+  min-width: 100px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Active State */
+.role-btn.active {
+  background: #a52a2a;
+  color: white;
+  border-color: #a52a2a;
+}
+
+/* Different colors for each role */
+.admin { background: #008000; }   /* Green */
+.teacher { background: #ff7f00; } /* Orange */
+.student { background: #007bff; } /* Blue */
+
+/* Input Fields */
+.input-group {
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
+  background: white;
+  gap: 10px;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+.input-wrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 5px;
+  color: #333;
+  width: 100%;
+}
+
+.input-wrapper i {
+  color: #555;
+  cursor: pointer;
+}
+
+/* Focus Effect */
+.input-wrapper:focus-within {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Remember Me & Forgot Password */
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background: #a52a2a;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* OR Divider */
+.or-divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.or-divider span {
+  background: white;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+/* Social Icons */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-login i {
+  font-size: 20px;
+  cursor: pointer;
+  color: #a52a2a;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 1024px) {
+  .signin-container {
+      flex-direction: column;
+      height: auto;
+      gap: 20px;
+  }
+
+  .signin-left {
+      max-width: 70%;
+  }
+
+  .signin-right {
+      max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .signin-left {
+      display: none; /* Hide image on small screens */
+  }
+
+  .signin-right {
+      width: 100%;
+      max-width: 90%;
+  }
+
+  .role-buttons {
+      flex-direction: column;
+  }
+
+  .input-group {
+      width: 100%;
+  }
+
+  .input-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .signin-right {
+      padding: 20px;
+  }
+
+  .role-btn {
+      width: 100%;
+  }
+
+  .input-wrapper {
+      padding: 10px;
+  }
+
+  .login-btn {
+      padding: 12px;
+  }
+}

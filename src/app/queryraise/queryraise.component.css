@@ -1,0 +1,164 @@
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal.show {
+    display: block;
+    opacity: 1;
+  }
+  
+  /* Modal Dialog Box */
+  .modal-dialog {
+
+    max-width: 500px;
+    margin: 50px auto;
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Modal Header */
+  .modal-header {
+    color: rgb(161, 15, 15);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .close {
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #aaa;
+  }
+  
+  /* Modal Body */
+  .modal-body {
+    padding: 20px 0;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 1rem;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* Modal Footer */
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-secondary {
+    color: black;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+  }
+  
+  .btn-primary {
+    background-color: #b11f1f;
+    color: white;
+    border: none;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Tablet and smaller devices */
+  @media (max-width: 768px) {
+    .modal-dialog {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .modal-title {
+      font-size: 1.2rem;
+    }
+  
+    .form-group {
+      margin-bottom: 12px;
+    }
+  
+    input, textarea {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  
+    .btn {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+    }
+  }
+  
+  /* Mobile Devices */
+  @media (max-width: 480px) {
+    .modal-dialog {
+      width: 95%;
+      padding: 10px;
+    }
+  
+    .modal-title {
+      font-size: 1rem;
+    }
+  
+    .form-group {
+      margin-bottom: 10px;
+    }
+  
+    input, textarea {
+      font-size: 0.85rem;
+      padding: 6px;
+    }
+  
+    .btn {
+      font-size: 0.85rem;
+      padding: 6px 12px;
+    }
+  }
+  

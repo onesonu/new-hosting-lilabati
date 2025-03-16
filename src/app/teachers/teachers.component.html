@@ -1,0 +1,27 @@
+<div class="teachers-conatiner">
+<div class="teacher-header">
+    <h1>Our professors</h1>
+    <p><a routerLink="/home" class ="lik">Home</a>/ Our professors</p>
+  </div>
+  
+  <div class="teacher-container">
+    <h2>Our professors</h2>
+    <p>
+        Meet our experienced and dedicated faculty members who are committed to shaping the future with their expertise and passion for teaching.
+    </p>
+  
+    <div class="teacher-grid">
+      <div class="teacher-card" *ngFor="let teacher of teachers">
+        <img [src]="teacher.image" alt="{{ teacher.name }}" class="teacher-img" />
+        <div class="teacher-info">
+          <h3>{{ teacher.name }}</h3>
+          <p>{{ teacher.designation }}</p>
+        </div>
+        <div class="share-icon">
+          <i class="fas fa-share-alt"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
